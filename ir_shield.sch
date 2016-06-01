@@ -1,0 +1,269 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:ir_receiver
+LIBS:w_connectors
+LIBS:ir_shield-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LED D1
+U 1 1 574E3D31
+P 3900 2850
+F 0 "D1" H 3900 2950 50  0000 C CNN
+F 1 "LED" H 3900 2750 50  0000 C CNN
+F 2 "LEDs:LED-5MM" H 3900 2850 50  0001 C CNN
+F 3 "" H 3900 2850 50  0000 C CNN
+	1    3900 2850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Q_NPN_BEC Q1
+U 1 1 574E3E2F
+P 3800 3450
+F 0 "Q1" H 4100 3500 50  0000 R CNN
+F 1 "2N3904" H 4400 3400 50  0000 R CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 4000 3550 50  0001 C CNN
+F 3 "" H 3800 3450 50  0000 C CNN
+	1    3800 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 574E3EC6
+P 3900 3850
+F 0 "#PWR01" H 3900 3600 50  0001 C CNN
+F 1 "GND" H 3900 3700 50  0000 C CNN
+F 2 "" H 3900 3850 50  0000 C CNN
+F 3 "" H 3900 3850 50  0000 C CNN
+	1    3900 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 3250 3900 3050
+Wire Wire Line
+	3900 3650 3900 3850
+$Comp
+L +5V #PWR02
+U 1 1 574E3EF6
+P 3900 2000
+F 0 "#PWR02" H 3900 1850 50  0001 C CNN
+F 1 "+5V" H 3900 2140 50  0000 C CNN
+F 2 "" H 3900 2000 50  0000 C CNN
+F 3 "" H 3900 2000 50  0000 C CNN
+	1    3900 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 574E3F5E
+P 3900 2300
+F 0 "R2" V 3980 2300 50  0000 C CNN
+F 1 "70R" V 3900 2300 50  0000 C CNN
+F 2 "Discret:R4" V 3830 2300 50  0001 C CNN
+F 3 "" H 3900 2300 50  0000 C CNN
+	1    3900 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 2150 3900 2000
+Wire Wire Line
+	3900 2450 3900 2650
+$Comp
+L R R1
+U 1 1 574E3FDA
+P 3300 3450
+F 0 "R1" V 3380 3450 50  0000 C CNN
+F 1 "2.2K" V 3300 3450 50  0000 C CNN
+F 2 "Discret:R4" V 3230 3450 50  0001 C CNN
+F 3 "" H 3300 3450 50  0000 C CNN
+	1    3300 3450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 3450 3600 3450
+Wire Wire Line
+	3150 3450 2750 3450
+$Comp
+L IR_Receiver U1
+U 1 1 574EFB9C
+P 7750 2750
+F 0 "U1" H 7550 2950 60  0000 C CNN
+F 1 "IR_Receiver" H 7750 2750 60  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 7750 2750 60  0001 C CNN
+F 3 "" H 7750 2750 60  0000 C CNN
+	1    7750 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 574EFCA8
+P 7750 4050
+F 0 "#PWR03" H 7750 3800 50  0001 C CNN
+F 1 "GND" H 7750 3900 50  0000 C CNN
+F 2 "" H 7750 4050 50  0000 C CNN
+F 3 "" H 7750 4050 50  0000 C CNN
+	1    7750 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR04
+U 1 1 574EFCC6
+P 7900 4050
+F 0 "#PWR04" H 7900 3900 50  0001 C CNN
+F 1 "+5V" H 7900 4190 50  0000 C CNN
+F 2 "" H 7900 4050 50  0000 C CNN
+F 3 "" H 7900 4050 50  0000 C CNN
+	1    7900 4050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7750 3250 7750 4050
+Wire Wire Line
+	7900 4050 7900 3250
+Wire Wire Line
+	7600 3650 7600 3250
+Wire Wire Line
+	6300 3650 7600 3650
+$Comp
+L Arduino_Header J1
+U 1 1 574EFD10
+P 5950 2950
+F 0 "J1" H 5950 3950 60  0000 C CNN
+F 1 "Arduino_Header" H 5950 1950 60  0000 C CNN
+F 2 "w_conn_misc:arduino_header" H 5950 2950 60  0001 C CNN
+F 3 "" H 5950 2950 60  0000 C CNN
+	1    5950 2950
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5600 2350
+NoConn ~ 5600 2450
+NoConn ~ 5600 2550
+NoConn ~ 5600 2950
+Text Label 2750 3450 0    60   ~ 0
+IR_Send
+Wire Wire Line
+	5600 2650 5100 2650
+Wire Wire Line
+	5600 2750 5100 2750
+Wire Wire Line
+	5600 2850 5450 2850
+Wire Wire Line
+	5450 2850 5450 2750
+Connection ~ 5450 2750
+NoConn ~ 5600 3150
+NoConn ~ 5600 3250
+NoConn ~ 5600 3350
+NoConn ~ 5600 3450
+NoConn ~ 5600 3550
+NoConn ~ 5600 3650
+NoConn ~ 6300 3850
+NoConn ~ 6300 3750
+NoConn ~ 6300 3450
+NoConn ~ 6300 3350
+NoConn ~ 6300 3250
+NoConn ~ 6300 3150
+NoConn ~ 6300 2950
+NoConn ~ 6300 2850
+NoConn ~ 6300 2750
+NoConn ~ 6300 2650
+NoConn ~ 6300 2550
+NoConn ~ 6300 2450
+NoConn ~ 6300 2350
+NoConn ~ 6300 2250
+NoConn ~ 6300 2150
+NoConn ~ 6300 2050
+Wire Wire Line
+	6300 3550 7000 3550
+Text Label 7000 3550 2    60   ~ 0
+IR_Send
+$Comp
+L GND #PWR05
+U 1 1 574F04EF
+P 5100 2750
+F 0 "#PWR05" H 5100 2500 50  0001 C CNN
+F 1 "GND" H 5100 2600 50  0000 C CNN
+F 2 "" H 5100 2750 50  0000 C CNN
+F 3 "" H 5100 2750 50  0000 C CNN
+	1    5100 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR06
+U 1 1 574F050F
+P 5100 2650
+F 0 "#PWR06" H 5100 2500 50  0001 C CNN
+F 1 "+5V" H 5100 2790 50  0000 C CNN
+F 2 "" H 5100 2650 50  0000 C CNN
+F 3 "" H 5100 2650 50  0000 C CNN
+	1    5100 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG07
+U 1 1 574F052F
+P 5300 2450
+F 0 "#FLG07" H 5300 2545 50  0001 C CNN
+F 1 "PWR_FLAG" H 5300 2630 50  0000 C CNN
+F 2 "" H 5300 2450 50  0000 C CNN
+F 3 "" H 5300 2450 50  0000 C CNN
+	1    5300 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG08
+U 1 1 574F054F
+P 5300 2950
+F 0 "#FLG08" H 5300 3045 50  0001 C CNN
+F 1 "PWR_FLAG" H 5300 3130 50  0000 C CNN
+F 2 "" H 5300 2950 50  0000 C CNN
+F 3 "" H 5300 2950 50  0000 C CNN
+	1    5300 2950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5300 2450 5300 2650
+Connection ~ 5300 2650
+Wire Wire Line
+	5300 2750 5300 2950
+Connection ~ 5300 2750
+$EndSCHEMATC
