@@ -1,4 +1,4 @@
-update=2016/6/1 下午 11:26:32
+update=2016/6/3 下午 03:02:12
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,4 +59,4 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=libraries/ir_receiver
-LibName31=libraries/w_connectors
+LibName31=libraries/arduino_shieldsNCL
